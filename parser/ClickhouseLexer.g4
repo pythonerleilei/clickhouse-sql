@@ -48,3 +48,7 @@ W: [wW];
 X: [xX];
 Y: [yY];
 Z: [zZ];
+
+
+
+WS: [ \t\r\n] -> skip;

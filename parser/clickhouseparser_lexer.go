@@ -1,4 +1,4 @@
-// Code generated from ClickhouseLexer.g4 by ANTLR 4.13.0. DO NOT EDIT.
+// Code generated from ClickHouseParser.g4 by ANTLR 4.13.0. DO NOT EDIT.
 
 package parser
 
@@ -14,14 +14,14 @@ var _ = fmt.Printf
 var _ = sync.Once{}
 var _ = unicode.IsLetter
 
-type ClickhouseLexer struct {
+type ClickHouseParserLexer struct {
 	*antlr.BaseLexer
 	channelNames []string
 	modeNames    []string
 	// TODO: EOF string
 }
 
-var ClickhouseLexerLexerStaticData struct {
+var ClickHouseParserLexerLexerStaticData struct {
 	once                   sync.Once
 	serializedATN          []int32
 	ChannelNames           []string
@@ -34,8 +34,8 @@ var ClickhouseLexerLexerStaticData struct {
 	decisionToDFA          []*antlr.DFA
 }
 
-func clickhouselexerLexerInit() {
-	staticData := &ClickhouseLexerLexerStaticData
+func clickhouseparserlexerLexerInit() {
+	staticData := &ClickHouseParserLexerLexerStaticData
 	staticData.ChannelNames = []string{
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN",
 	}
@@ -175,75 +175,75 @@ func clickhouselexerLexerInit() {
 	}
 }
 
-// ClickhouseLexerInit initializes any static state used to implement ClickhouseLexer. By default the
+// ClickHouseParserLexerInit initializes any static state used to implement ClickHouseParserLexer. By default the
 // static state used to implement the lexer is lazily initialized during the first call to
-// NewClickhouseLexer(). You can call this function if you wish to initialize the static state ahead
+// NewClickHouseParserLexer(). You can call this function if you wish to initialize the static state ahead
 // of time.
-func ClickhouseLexerInit() {
-	staticData := &ClickhouseLexerLexerStaticData
-	staticData.once.Do(clickhouselexerLexerInit)
+func ClickHouseParserLexerInit() {
+	staticData := &ClickHouseParserLexerLexerStaticData
+	staticData.once.Do(clickhouseparserlexerLexerInit)
 }
 
-// NewClickhouseLexer produces a new lexer instance for the optional input antlr.CharStream.
-func NewClickhouseLexer(input antlr.CharStream) *ClickhouseLexer {
-	ClickhouseLexerInit()
-	l := new(ClickhouseLexer)
+// NewClickHouseParserLexer produces a new lexer instance for the optional input antlr.CharStream.
+func NewClickHouseParserLexer(input antlr.CharStream) *ClickHouseParserLexer {
+	ClickHouseParserLexerInit()
+	l := new(ClickHouseParserLexer)
 	l.BaseLexer = antlr.NewBaseLexer(input)
-	staticData := &ClickhouseLexerLexerStaticData
+	staticData := &ClickHouseParserLexerLexerStaticData
 	l.Interpreter = antlr.NewLexerATNSimulator(l, staticData.atn, staticData.decisionToDFA, staticData.PredictionContextCache)
 	l.channelNames = staticData.ChannelNames
 	l.modeNames = staticData.ModeNames
 	l.RuleNames = staticData.RuleNames
 	l.LiteralNames = staticData.LiteralNames
 	l.SymbolicNames = staticData.SymbolicNames
-	l.GrammarFileName = "ClickhouseLexer.g4"
+	l.GrammarFileName = "ClickHouseParser.g4"
 	// TODO: l.EOF = antlr.TokenEOF
 
 	return l
 }
 
-// ClickhouseLexer tokens.
+// ClickHouseParserLexer tokens.
 const (
-	ClickhouseLexerCREATE   = 1
-	ClickhouseLexerDATABASE = 2
-	ClickhouseLexerIF       = 3
-	ClickhouseLexerNOT      = 4
-	ClickhouseLexerEXISTS   = 5
-	ClickhouseLexerON       = 6
-	ClickhouseLexerCLUSTER  = 7
-	ClickhouseLexerENGINE   = 8
-	ClickhouseLexerCOMMENT  = 9
-	ClickhouseLexerID       = 10
-	ClickhouseLexerEQUAL    = 11
-	ClickhouseLexerLEFT_P   = 12
-	ClickhouseLexerRIGHT_P  = 13
-	ClickhouseLexerCOMMA    = 14
-	ClickhouseLexerNUMBER   = 15
-	ClickhouseLexerSTRING   = 16
-	ClickhouseLexerB        = 17
-	ClickhouseLexerC        = 18
-	ClickhouseLexerD        = 19
-	ClickhouseLexerE        = 20
-	ClickhouseLexerF        = 21
-	ClickhouseLexerG        = 22
-	ClickhouseLexerH        = 23
-	ClickhouseLexerI        = 24
-	ClickhouseLexerJ        = 25
-	ClickhouseLexerK        = 26
-	ClickhouseLexerL        = 27
-	ClickhouseLexerM        = 28
-	ClickhouseLexerN        = 29
-	ClickhouseLexerO        = 30
-	ClickhouseLexerP        = 31
-	ClickhouseLexerQ        = 32
-	ClickhouseLexerR        = 33
-	ClickhouseLexerS        = 34
-	ClickhouseLexerT        = 35
-	ClickhouseLexerU        = 36
-	ClickhouseLexerV        = 37
-	ClickhouseLexerW        = 38
-	ClickhouseLexerX        = 39
-	ClickhouseLexerY        = 40
-	ClickhouseLexerZ        = 41
-	ClickhouseLexerWS       = 42
+	ClickHouseParserLexerCREATE   = 1
+	ClickHouseParserLexerDATABASE = 2
+	ClickHouseParserLexerIF       = 3
+	ClickHouseParserLexerNOT      = 4
+	ClickHouseParserLexerEXISTS   = 5
+	ClickHouseParserLexerON       = 6
+	ClickHouseParserLexerCLUSTER  = 7
+	ClickHouseParserLexerENGINE   = 8
+	ClickHouseParserLexerCOMMENT  = 9
+	ClickHouseParserLexerID       = 10
+	ClickHouseParserLexerEQUAL    = 11
+	ClickHouseParserLexerLEFT_P   = 12
+	ClickHouseParserLexerRIGHT_P  = 13
+	ClickHouseParserLexerCOMMA    = 14
+	ClickHouseParserLexerNUMBER   = 15
+	ClickHouseParserLexerSTRING   = 16
+	ClickHouseParserLexerB        = 17
+	ClickHouseParserLexerC        = 18
+	ClickHouseParserLexerD        = 19
+	ClickHouseParserLexerE        = 20
+	ClickHouseParserLexerF        = 21
+	ClickHouseParserLexerG        = 22
+	ClickHouseParserLexerH        = 23
+	ClickHouseParserLexerI        = 24
+	ClickHouseParserLexerJ        = 25
+	ClickHouseParserLexerK        = 26
+	ClickHouseParserLexerL        = 27
+	ClickHouseParserLexerM        = 28
+	ClickHouseParserLexerN        = 29
+	ClickHouseParserLexerO        = 30
+	ClickHouseParserLexerP        = 31
+	ClickHouseParserLexerQ        = 32
+	ClickHouseParserLexerR        = 33
+	ClickHouseParserLexerS        = 34
+	ClickHouseParserLexerT        = 35
+	ClickHouseParserLexerU        = 36
+	ClickHouseParserLexerV        = 37
+	ClickHouseParserLexerW        = 38
+	ClickHouseParserLexerX        = 39
+	ClickHouseParserLexerY        = 40
+	ClickHouseParserLexerZ        = 41
+	ClickHouseParserLexerWS       = 42
 )

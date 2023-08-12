@@ -19,10 +19,6 @@ func (v *BaseClickHouseParserVisitor) VisitCreateDatabaseStatement(ctx *CreateDa
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseClickHouseParserVisitor) VisitParameters(ctx *ParametersContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
 func (v *BaseClickHouseParserVisitor) VisitParameter(ctx *ParameterContext) interface{} {
 	return v.VisitChildren(ctx)
 }

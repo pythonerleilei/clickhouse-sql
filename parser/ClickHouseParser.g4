@@ -18,11 +18,10 @@ createDatabaseStatement
         (IF NOT EXISTS)? 
         db_name=ID 
         (ON CLUSTER cluster_name=ID)? 
-        (ENGINE EQUAL ID (LEFT_P engine_params=parameters RIGHT_P)?)?
-        COMMENT comment=STRING
+        (ENGINE EQUAL engine_name=ID (LEFT_P engine_params+=parameter (COMMA parameter)* RIGHT_P)?)?
+        (COMMENT comment=STRING)?
     ;
 
-parameters: parameter (COMMA parameter)*;
 parameter
     : NUMBER
     | STRING

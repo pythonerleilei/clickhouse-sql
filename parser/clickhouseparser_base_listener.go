@@ -3,7 +3,7 @@
 package parser // ClickHouseParser
 import "github.com/antlr4-go/antlr/v4"
 
-// BaseClickHouseParserListener is a complete listener for a parse tree produced by ClickHouseParser.
+// BaseClickHouseParserListener is a complete listener for a parse tree produced by ClickHouseParserParser.
 type BaseClickHouseParserListener struct{}
 
 var _ ClickHouseParserListener = &BaseClickHouseParserListener{}
@@ -39,12 +39,6 @@ func (s *BaseClickHouseParserListener) EnterCreateDatabaseStatement(ctx *CreateD
 // ExitCreateDatabaseStatement is called when production createDatabaseStatement is exited.
 func (s *BaseClickHouseParserListener) ExitCreateDatabaseStatement(ctx *CreateDatabaseStatementContext) {
 }
-
-// EnterParameters is called when production parameters is entered.
-func (s *BaseClickHouseParserListener) EnterParameters(ctx *ParametersContext) {}
-
-// ExitParameters is called when production parameters is exited.
-func (s *BaseClickHouseParserListener) ExitParameters(ctx *ParametersContext) {}
 
 // EnterParameter is called when production parameter is entered.
 func (s *BaseClickHouseParserListener) EnterParameter(ctx *ParameterContext) {}

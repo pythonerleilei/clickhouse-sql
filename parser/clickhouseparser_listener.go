@@ -3,7 +3,7 @@
 package parser // ClickHouseParser
 import "github.com/antlr4-go/antlr/v4"
 
-// ClickHouseParserListener is a complete listener for a parse tree produced by ClickHouseParser.
+// ClickHouseParserListener is a complete listener for a parse tree produced by ClickHouseParserParser.
 type ClickHouseParserListener interface {
 	antlr.ParseTreeListener
 
@@ -16,9 +16,6 @@ type ClickHouseParserListener interface {
 	// EnterCreateDatabaseStatement is called when entering the createDatabaseStatement production.
 	EnterCreateDatabaseStatement(c *CreateDatabaseStatementContext)
 
-	// EnterParameters is called when entering the parameters production.
-	EnterParameters(c *ParametersContext)
-
 	// EnterParameter is called when entering the parameter production.
 	EnterParameter(c *ParameterContext)
 
@@ -30,9 +27,6 @@ type ClickHouseParserListener interface {
 
 	// ExitCreateDatabaseStatement is called when exiting the createDatabaseStatement production.
 	ExitCreateDatabaseStatement(c *CreateDatabaseStatementContext)
-
-	// ExitParameters is called when exiting the parameters production.
-	ExitParameters(c *ParametersContext)
 
 	// ExitParameter is called when exiting the parameter production.
 	ExitParameter(c *ParameterContext)
