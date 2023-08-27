@@ -19,6 +19,27 @@ type ClickHouseParserListener interface {
 	// EnterCreateTableStatement is called when entering the createTableStatement production.
 	EnterCreateTableStatement(c *CreateTableStatementContext)
 
+	// EnterColumn_defs is called when entering the column_defs production.
+	EnterColumn_defs(c *Column_defsContext)
+
+	// EnterColumn_def is called when entering the column_def production.
+	EnterColumn_def(c *Column_defContext)
+
+	// EnterIndex_defs is called when entering the index_defs production.
+	EnterIndex_defs(c *Index_defsContext)
+
+	// EnterIndex_def is called when entering the index_def production.
+	EnterIndex_def(c *Index_defContext)
+
+	// EnterTtl_def is called when entering the ttl_def production.
+	EnterTtl_def(c *Ttl_defContext)
+
+	// EnterKey_values is called when entering the key_values production.
+	EnterKey_values(c *Key_valuesContext)
+
+	// EnterKey_value is called when entering the key_value production.
+	EnterKey_value(c *Key_valueContext)
+
 	// EnterAlterStatement is called when entering the alterStatement production.
 	EnterAlterStatement(c *AlterStatementContext)
 
@@ -51,6 +72,27 @@ type ClickHouseParserListener interface {
 
 	// ExitCreateTableStatement is called when exiting the createTableStatement production.
 	ExitCreateTableStatement(c *CreateTableStatementContext)
+
+	// ExitColumn_defs is called when exiting the column_defs production.
+	ExitColumn_defs(c *Column_defsContext)
+
+	// ExitColumn_def is called when exiting the column_def production.
+	ExitColumn_def(c *Column_defContext)
+
+	// ExitIndex_defs is called when exiting the index_defs production.
+	ExitIndex_defs(c *Index_defsContext)
+
+	// ExitIndex_def is called when exiting the index_def production.
+	ExitIndex_def(c *Index_defContext)
+
+	// ExitTtl_def is called when exiting the ttl_def production.
+	ExitTtl_def(c *Ttl_defContext)
+
+	// ExitKey_values is called when exiting the key_values production.
+	ExitKey_values(c *Key_valuesContext)
+
+	// ExitKey_value is called when exiting the key_value production.
+	ExitKey_value(c *Key_valueContext)
 
 	// ExitAlterStatement is called when exiting the alterStatement production.
 	ExitAlterStatement(c *AlterStatementContext)

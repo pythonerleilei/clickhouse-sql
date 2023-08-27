@@ -46,6 +46,48 @@ func (s *BaseClickHouseParserListener) EnterCreateTableStatement(ctx *CreateTabl
 // ExitCreateTableStatement is called when production createTableStatement is exited.
 func (s *BaseClickHouseParserListener) ExitCreateTableStatement(ctx *CreateTableStatementContext) {}
 
+// EnterColumn_defs is called when production column_defs is entered.
+func (s *BaseClickHouseParserListener) EnterColumn_defs(ctx *Column_defsContext) {}
+
+// ExitColumn_defs is called when production column_defs is exited.
+func (s *BaseClickHouseParserListener) ExitColumn_defs(ctx *Column_defsContext) {}
+
+// EnterColumn_def is called when production column_def is entered.
+func (s *BaseClickHouseParserListener) EnterColumn_def(ctx *Column_defContext) {}
+
+// ExitColumn_def is called when production column_def is exited.
+func (s *BaseClickHouseParserListener) ExitColumn_def(ctx *Column_defContext) {}
+
+// EnterIndex_defs is called when production index_defs is entered.
+func (s *BaseClickHouseParserListener) EnterIndex_defs(ctx *Index_defsContext) {}
+
+// ExitIndex_defs is called when production index_defs is exited.
+func (s *BaseClickHouseParserListener) ExitIndex_defs(ctx *Index_defsContext) {}
+
+// EnterIndex_def is called when production index_def is entered.
+func (s *BaseClickHouseParserListener) EnterIndex_def(ctx *Index_defContext) {}
+
+// ExitIndex_def is called when production index_def is exited.
+func (s *BaseClickHouseParserListener) ExitIndex_def(ctx *Index_defContext) {}
+
+// EnterTtl_def is called when production ttl_def is entered.
+func (s *BaseClickHouseParserListener) EnterTtl_def(ctx *Ttl_defContext) {}
+
+// ExitTtl_def is called when production ttl_def is exited.
+func (s *BaseClickHouseParserListener) ExitTtl_def(ctx *Ttl_defContext) {}
+
+// EnterKey_values is called when production key_values is entered.
+func (s *BaseClickHouseParserListener) EnterKey_values(ctx *Key_valuesContext) {}
+
+// ExitKey_values is called when production key_values is exited.
+func (s *BaseClickHouseParserListener) ExitKey_values(ctx *Key_valuesContext) {}
+
+// EnterKey_value is called when production key_value is entered.
+func (s *BaseClickHouseParserListener) EnterKey_value(ctx *Key_valueContext) {}
+
+// ExitKey_value is called when production key_value is exited.
+func (s *BaseClickHouseParserListener) ExitKey_value(ctx *Key_valueContext) {}
+
 // EnterAlterStatement is called when production alterStatement is entered.
 func (s *BaseClickHouseParserListener) EnterAlterStatement(ctx *AlterStatementContext) {}
 

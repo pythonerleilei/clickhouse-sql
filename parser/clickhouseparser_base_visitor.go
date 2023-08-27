@@ -23,6 +23,34 @@ func (v *BaseClickHouseParserVisitor) VisitCreateTableStatement(ctx *CreateTable
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseClickHouseParserVisitor) VisitColumn_defs(ctx *Column_defsContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitColumn_def(ctx *Column_defContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitIndex_defs(ctx *Index_defsContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitIndex_def(ctx *Index_defContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitTtl_def(ctx *Ttl_defContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitKey_values(ctx *Key_valuesContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitKey_value(ctx *Key_valueContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseClickHouseParserVisitor) VisitAlterStatement(ctx *AlterStatementContext) interface{} {
 	return v.VisitChildren(ctx)
 }

@@ -3,8 +3,14 @@ package visitor
 import "clickhouse-sql/parser"
 
 func (v *BaseAstClickhouseParserVisitor) VisitExpression(ctx *parser.ExpressionContext) interface{} {
+	var name string
+	if ctx.ID() == nil || len(ctx.ID().GetText()) == 0{
+		name = "tuple"
+	} else {
+		name = ctx.ID().GetText()
+	}
 	expression := &Expression{}
-	expression.name = ctx.ID().GetText()
+	expression.name = name
 	if(ctx.Parameters() != nil) {
 		var children = v.Visit(ctx.Parameters()).([]TreeNode)
 		expression.SetChildren(children)

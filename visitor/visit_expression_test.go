@@ -70,3 +70,19 @@ func TestVisitExpression(t *testing.T) {
 		t.Fatalf("parse expression[%v] failed, expected[%v], get[%v]", sql, "Map", e.Name())
 	}
 }
+
+func TestVisitExpressionTuple(t *testing.T) {
+	sql := "(String, Nullable(FixString(32))"
+	astVisitor := NewBaseAstClickhouseParserVisitor(sql)
+
+	result := astVisitor.Visit(astVisitor.Parser.Expression())
+
+	e, ok := result.(*Expression)
+	if !ok {
+		t.Fatalf("parse expression[%v] failed", sql)
+	}
+	
+	if e.Name() != "tuple" {
+		t.Fatalf("parse expression[%v] failed, expected[%v], get[%v]", sql, "Map", e.Name())
+	}
+}

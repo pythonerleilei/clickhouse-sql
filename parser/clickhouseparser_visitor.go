@@ -19,6 +19,27 @@ type ClickHouseParserVisitor interface {
 	// Visit a parse tree produced by ClickHouseParserParser#createTableStatement.
 	VisitCreateTableStatement(ctx *CreateTableStatementContext) interface{}
 
+	// Visit a parse tree produced by ClickHouseParserParser#column_defs.
+	VisitColumn_defs(ctx *Column_defsContext) interface{}
+
+	// Visit a parse tree produced by ClickHouseParserParser#column_def.
+	VisitColumn_def(ctx *Column_defContext) interface{}
+
+	// Visit a parse tree produced by ClickHouseParserParser#index_defs.
+	VisitIndex_defs(ctx *Index_defsContext) interface{}
+
+	// Visit a parse tree produced by ClickHouseParserParser#index_def.
+	VisitIndex_def(ctx *Index_defContext) interface{}
+
+	// Visit a parse tree produced by ClickHouseParserParser#ttl_def.
+	VisitTtl_def(ctx *Ttl_defContext) interface{}
+
+	// Visit a parse tree produced by ClickHouseParserParser#key_values.
+	VisitKey_values(ctx *Key_valuesContext) interface{}
+
+	// Visit a parse tree produced by ClickHouseParserParser#key_value.
+	VisitKey_value(ctx *Key_valueContext) interface{}
+
 	// Visit a parse tree produced by ClickHouseParserParser#alterStatement.
 	VisitAlterStatement(ctx *AlterStatementContext) interface{}
 
