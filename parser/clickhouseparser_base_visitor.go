@@ -19,6 +19,34 @@ func (v *BaseClickHouseParserVisitor) VisitCreateDatabaseStatement(ctx *CreateDa
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseClickHouseParserVisitor) VisitCreateTableStatement(ctx *CreateTableStatementContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitAlterStatement(ctx *AlterStatementContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitAlterTableColumn(ctx *AlterTableColumnContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitTalbeIdentifier(ctx *TalbeIdentifierContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitColumnType(ctx *ColumnTypeContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitExpression(ctx *ExpressionContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseClickHouseParserVisitor) VisitParameters(ctx *ParametersContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseClickHouseParserVisitor) VisitParameter(ctx *ParameterContext) interface{} {
 	return v.VisitChildren(ctx)
 }

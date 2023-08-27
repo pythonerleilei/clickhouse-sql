@@ -16,6 +16,27 @@ type ClickHouseParserListener interface {
 	// EnterCreateDatabaseStatement is called when entering the createDatabaseStatement production.
 	EnterCreateDatabaseStatement(c *CreateDatabaseStatementContext)
 
+	// EnterCreateTableStatement is called when entering the createTableStatement production.
+	EnterCreateTableStatement(c *CreateTableStatementContext)
+
+	// EnterAlterStatement is called when entering the alterStatement production.
+	EnterAlterStatement(c *AlterStatementContext)
+
+	// EnterAlterTableColumn is called when entering the alterTableColumn production.
+	EnterAlterTableColumn(c *AlterTableColumnContext)
+
+	// EnterTalbeIdentifier is called when entering the talbeIdentifier production.
+	EnterTalbeIdentifier(c *TalbeIdentifierContext)
+
+	// EnterColumnType is called when entering the columnType production.
+	EnterColumnType(c *ColumnTypeContext)
+
+	// EnterExpression is called when entering the expression production.
+	EnterExpression(c *ExpressionContext)
+
+	// EnterParameters is called when entering the parameters production.
+	EnterParameters(c *ParametersContext)
+
 	// EnterParameter is called when entering the parameter production.
 	EnterParameter(c *ParameterContext)
 
@@ -27,6 +48,27 @@ type ClickHouseParserListener interface {
 
 	// ExitCreateDatabaseStatement is called when exiting the createDatabaseStatement production.
 	ExitCreateDatabaseStatement(c *CreateDatabaseStatementContext)
+
+	// ExitCreateTableStatement is called when exiting the createTableStatement production.
+	ExitCreateTableStatement(c *CreateTableStatementContext)
+
+	// ExitAlterStatement is called when exiting the alterStatement production.
+	ExitAlterStatement(c *AlterStatementContext)
+
+	// ExitAlterTableColumn is called when exiting the alterTableColumn production.
+	ExitAlterTableColumn(c *AlterTableColumnContext)
+
+	// ExitTalbeIdentifier is called when exiting the talbeIdentifier production.
+	ExitTalbeIdentifier(c *TalbeIdentifierContext)
+
+	// ExitColumnType is called when exiting the columnType production.
+	ExitColumnType(c *ColumnTypeContext)
+
+	// ExitExpression is called when exiting the expression production.
+	ExitExpression(c *ExpressionContext)
+
+	// ExitParameters is called when exiting the parameters production.
+	ExitParameters(c *ParametersContext)
 
 	// ExitParameter is called when exiting the parameter production.
 	ExitParameter(c *ParameterContext)

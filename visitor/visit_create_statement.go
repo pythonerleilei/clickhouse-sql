@@ -11,10 +11,11 @@ type CreateDatabase struct {
 	DatabaseName	string
 	ClusterName		string
 	EngineName		string
-	EngineParams	[]string
+	EngineParams	[]*Expression
 	Comment			string
 }
 
+// create database
 func (v *BaseAstClickhouseParserVisitor) VisitCreateDatabaseStatement(ctx *parser.CreateDatabaseStatementContext) interface{} {
 	createDatabase := &CreateDatabase{}
 	if ctx.EXISTS() != nil {
@@ -26,23 +27,16 @@ func (v *BaseAstClickhouseParserVisitor) VisitCreateDatabaseStatement(ctx *parse
 		createDatabase.ClusterName = ctx.GetCluster_name().GetText()
 	}
 	
-	if (ctx.GetEngine_name() != nil ){
-		createDatabase.EngineName = ctx.GetEngine_name().GetText()
+	if ctx.GetEngine_name() != nil {
+		e := v.Visit(ctx.GetEngine_name()).(*Expression)
+		createDatabase.EngineParams = e.children
+		createDatabase.EngineName = e.Name()
 	}
 	
-	if ctx.GetEngine_params() != nil {
-		var params []string
-		for _, param := range ctx.GetEngine_params() {
-			params = append(params, v.VisitParameter(param.(*parser.ParameterContext)).(string))
-		}
-		createDatabase.EngineParams = params;
-	}
 	if (ctx.COMMENT() != nil ){
 		createDatabase.Comment = ctx.GetComment().GetText();
 	}
 	return createDatabase
 }
 
-func (v *BaseAstClickhouseParserVisitor) VisitParameter(ctx *parser.ParameterContext) interface{} {
-	return ctx.GetText()
-}
+//
